@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+
+<head>
+          <title>SLEEP CONDITIONS</title>
+    <meta charset = "UTF-8" />
+  </head>
+  <body>
+    <h1>Sleep Clasification</h1>
+    <script>
+      function sleephours (sh, age, r)
+      {
+          if ((sh<8 && age > 40 ) || (sh <6 && age <= 40))
+          {
+            alert("sleep Deprived");
+          }
+          else
+          {
+            alert("healthy");
+          }    
+          if (r == "America")
+          {
+              alert("87% of highschool students in America are sleep deprived");
+          }
+          else
+          {
+            "nada"
+          }
+      }
+      sleephours(7, 44, "");
+      </script>    
+    <form>
+      <fieldset>
+               <p>
+          <label>Sleep Hours</label>
+          <input type = "text" name="sleep" required>
+        </p>
+        <p>
+          <label>Age</label>
+          <input type = "text" input name="age" required> 
+        <p>
+          <label>Region</label>
+          <input type = "text" input name="region"> 
+        </p>
+      </fieldset>
+       
+      <button onclick=sleepHours >Submit</button>
+    </form>
+    
+  </body>
+</html>
