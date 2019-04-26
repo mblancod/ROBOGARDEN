@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <title>Conditional Calculation</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+        <h1>Conditional</h1>
+        <script>
+          
+        // var sum_array = new Array(0,0,0);
+        let sum_array = [
+            ['odd',0],
+            ['even',0],
+            ['all',0]
+        ];
+        for (var i = 0; i<3; i++)
+        {
+            sum_array[i][1] = sum_numbers(sum_array[i][0])
+            document.write('Sum of '+sum_array[i][0]+' numbers from 0 to 100 is ' + sum_array[i][1]);
+        }
+
+          function sum_numbers (operation)
+            {
+                var n = 100;
+                var sum = 0;
+                for (var i=0; i < n; i++)
+                {
+                    if (operation == 'odd') 
+                    {
+                        if ((i % 2) == 1 ) { sum = sum +i; }
+                    }
+                    else if (operation == 'even')
+                    {
+                        if ((i % 2) == 0 ) { sum = sum +i;}
+                    }
+                    else if (operation == 'all')
+                    {
+                        sum = sum +i; 
+                    }
+                }
+            return sum
+            }
+         
+          
+        </script>
+               
+</body>  
+</html>  
