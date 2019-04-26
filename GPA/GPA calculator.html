@@ -1,0 +1,59 @@
+<!doctype HTML>
+    <form name="grade_table">
+        
+            <div>Numeric Grade</div>
+            <br>
+                <div>Physics: 
+                    <select name="first">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+            <br>
+                <div>Maths: 
+                    <select name="second">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+            <br>
+                <div>Chemistry: 
+                    <select name="third">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+    <br>
+    <input type="submit" onclick="calculate()"></button>
+</form>
+<br><br>
+<script>
+    function calculate(){
+        var first_sub   = document.forms["grade_table"]["first"].value;
+        var second_sub  = document.forms["grade_table"]["second"].value;
+        var thrid_sub   = document.forms["grade_table"]["third"].value;
+        alert("The average score is " + myGpa(first_sub,second_sub,thrid_sub)+"%");
+    }
+    function myGpa(a1,a2,a3){
+        return calculateAverage(    convertAlphatoNumeric(a1),
+                                    convertAlphatoNumeric(a2),
+                                    convertAlphatoNumeric(a3)
+        );
+    }
+    function convertAlphatoNumeric(GPA){
+        if (GPA === 'A')        return 100
+        else if (GPA === 'B')   return 85
+        else if (GPA === 'C')   return 70
+        else if (GPA === 'D')   return 60
+    }
+    function calculateAverage(n1,n2,n3){
+        return (n1 + n2  + n3) / 3
+    }
+    </script>
+</HTML>
